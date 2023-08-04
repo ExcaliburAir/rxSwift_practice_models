@@ -17,6 +17,7 @@ xcuserdata/
 
 # CocoaPods
 /Pods
+*/Pods/*
 *.lock
 /Manifest.lock
 /xcshareddata/
