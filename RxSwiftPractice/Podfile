@@ -1,0 +1,9 @@
+platform :ios, '16.0'  # 根据你的项目需要选择合适的平台和版本
+
+target 'RxSwiftPractice' do
+    use_frameworks!
+
+    # 添加RxSwift和RxCocoa依赖
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end
