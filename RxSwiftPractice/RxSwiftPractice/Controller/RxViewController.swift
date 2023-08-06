@@ -17,6 +17,7 @@ class RxViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
     
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -81,6 +82,16 @@ class RxViewController: UIViewController {
                 // 跳转
                 self?.performSegue(
                     withIdentifier: "ToRxTableViewController",
+                    sender: self)
+            }.disposed(by: bag)
+        
+        // Button 点击可以响应
+        button5.rx.tap
+            .subscribe { [weak self] (event: Event<()>) in
+                print("tap button 5")
+                // 跳转
+                self?.performSegue(
+                    withIdentifier: "ToRxNetworkViewController",
                     sender: self)
             }.disposed(by: bag)
         

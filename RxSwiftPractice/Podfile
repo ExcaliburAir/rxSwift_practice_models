@@ -6,4 +6,5 @@ target 'RxSwiftPractice' do
     # 添加RxSwift和RxCocoa依赖
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'Alamofire'
 end

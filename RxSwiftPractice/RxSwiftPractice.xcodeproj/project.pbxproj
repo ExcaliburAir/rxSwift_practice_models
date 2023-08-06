@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0E554D2A7F38E6005F1556 /* AlamofireNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E554C2A7F38E6005F1556 /* AlamofireNet.swift */; };
+		8A0E554F2A7F3953005F1556 /* AlamofireError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E554E2A7F3953005F1556 /* AlamofireError.swift */; };
+		8A0E55512A7F3C6D005F1556 /* NetworkDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E55502A7F3C6D005F1556 /* NetworkDataModel.swift */; };
+		8A0E55532A7F3D49005F1556 /* RxNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E55522A7F3D49005F1556 /* RxNetworkViewController.swift */; };
 		8A366C3C2A7C2884008EE663 /* RxObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A366C3B2A7C2884008EE663 /* RxObservableViewController.swift */; };
 		8A366C3E2A7C3E70008EE663 /* RxSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A366C3D2A7C3E70008EE663 /* RxSubjectViewController.swift */; };
 		8A366C402A7C480F008EE663 /* RxFunctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A366C3F2A7C480F008EE663 /* RxFunctorViewController.swift */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		5115031635706C11A7A880CB /* Pods-RxSwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0E554C2A7F38E6005F1556 /* AlamofireNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNet.swift; sourceTree = "<group>"; };
+		8A0E554E2A7F3953005F1556 /* AlamofireError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireError.swift; sourceTree = "<group>"; };
+		8A0E55502A7F3C6D005F1556 /* NetworkDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModel.swift; sourceTree = "<group>"; };
+		8A0E55522A7F3D49005F1556 /* RxNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNetworkViewController.swift; sourceTree = "<group>"; };
 		8A366C3B2A7C2884008EE663 /* RxObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxObservableViewController.swift; sourceTree = "<group>"; };
 		8A366C3D2A7C3E70008EE663 /* RxSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSubjectViewController.swift; sourceTree = "<group>"; };
 		8A366C3F2A7C480F008EE663 /* RxFunctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFunctorViewController.swift; sourceTree = "<group>"; };
@@ -100,9 +108,8 @@
 		8A366C372A7C0AA2008EE663 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8A366C472A7C6B50008EE663 /* StudentModel.swift */,
-				8A366C432A7C637E008EE663 /* CellDataModel.swift */,
-				8A366C452A7C6706008EE663 /* CellModel.swift */,
+				8A366C4A2A7F3662008EE663 /* Network */,
+				8A366C492A7F3641008EE663 /* Data */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 				8A366C3B2A7C2884008EE663 /* RxObservableViewController.swift */,
 				8A366C3D2A7C3E70008EE663 /* RxSubjectViewController.swift */,
 				8A366C3F2A7C480F008EE663 /* RxFunctorViewController.swift */,
+				8A0E55522A7F3D49005F1556 /* RxNetworkViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,6 +143,26 @@
 				8AEE55A22A71398700BD1E40 /* RxSwiftPractice.xcdatamodeld */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		8A366C492A7F3641008EE663 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8A366C472A7C6B50008EE663 /* StudentModel.swift */,
+				8A366C452A7C6706008EE663 /* CellModel.swift */,
+				8A366C432A7C637E008EE663 /* CellDataModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8A366C4A2A7F3662008EE663 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8A0E55502A7F3C6D005F1556 /* NetworkDataModel.swift */,
+				8A0E554C2A7F38E6005F1556 /* AlamofireNet.swift */,
+				8A0E554E2A7F3953005F1556 /* AlamofireError.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		8AEE558D2A71398700BD1E40 = {
@@ -386,10 +414,14 @@
 				8A366C3E2A7C3E70008EE663 /* RxSubjectViewController.swift in Sources */,
 				8AEE559A2A71398700BD1E40 /* AppDelegate.swift in Sources */,
 				8A366C482A7C6B50008EE663 /* StudentModel.swift in Sources */,
+				8A0E55512A7F3C6D005F1556 /* NetworkDataModel.swift in Sources */,
 				8A366C462A7C6706008EE663 /* CellModel.swift in Sources */,
+				8A0E55532A7F3D49005F1556 /* RxNetworkViewController.swift in Sources */,
+				8A0E554F2A7F3953005F1556 /* AlamofireError.swift in Sources */,
 				8A366C3C2A7C2884008EE663 /* RxObservableViewController.swift in Sources */,
 				8A366C402A7C480F008EE663 /* RxFunctorViewController.swift in Sources */,
 				8A366C442A7C637E008EE663 /* CellDataModel.swift in Sources */,
+				8A0E554D2A7F38E6005F1556 /* AlamofireNet.swift in Sources */,
 				8AEE55A42A71398700BD1E40 /* RxSwiftPractice.xcdatamodeld in Sources */,
 				8AEE559C2A71398700BD1E40 /* SceneDelegate.swift in Sources */,
 				8A366C422A7C5992008EE663 /* RxTableViewController.swift in Sources */,
