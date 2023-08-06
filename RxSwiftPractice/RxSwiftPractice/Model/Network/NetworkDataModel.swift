@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetDataModel: Codable {
+struct NetData: Codable {
     let userId: Int
     let id: Int
     let title: String

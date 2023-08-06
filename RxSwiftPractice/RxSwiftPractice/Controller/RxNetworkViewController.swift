@@ -45,7 +45,7 @@ extension RxNetworkViewController {
             // get
             .getRequest(path: "/posts/1")
             // 成功返回
-            .subscribe(onSuccess: { (post: NetDataModel) in
+            .subscribe(onSuccess: { (post: NetData) in
                 print("GET Request Success:")
                 print("UserID: \(post.userId)")
                 print("Title: \(post.title)")
@@ -70,7 +70,7 @@ extension RxNetworkViewController {
             // post
             .postRequest(path: "/posts", parameters: newPost)
             // 成功返回
-            .subscribe(onSuccess: { (createdPost: NetDataModel) in
+            .subscribe(onSuccess: { (createdPost: NetData) in
                 print("POST Request Success:")
                 print("New Post ID: \(createdPost.id)")
             // 失败返回
