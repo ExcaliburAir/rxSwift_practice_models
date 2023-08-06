@@ -47,7 +47,7 @@
                                 </buttonConfiguration>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text Field 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCO-DF-oco">
-                                <rect key="frame" x="100" y="244" width="193" height="34"/>
+                                <rect key="frame" x="100" y="279" width="193" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Riw-Zf-8OF"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text Feild 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWf-2C-ulo">
-                                <rect key="frame" x="100" y="298" width="193" height="34"/>
+                                <rect key="frame" x="100" y="333" width="193" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="n2n-dg-Dwl"/>
                                 </constraints>
@@ -63,7 +63,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abA-FO-7At">
-                                <rect key="frame" x="176" y="332" width="41.333333333333343" height="50"/>
+                                <rect key="frame" x="176" y="367" width="41.333333333333343" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="U5C-Vh-EZk"/>
@@ -90,8 +90,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button5 : Network"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2N-zK-sUd">
+                                <rect key="frame" x="0.0" y="234" width="393" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="qGg-pm-b89"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button6 : Other Cases"/>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-NG-Lif">
-                                <rect key="frame" x="76" y="382" width="240" height="128"/>
+                                <rect key="frame" x="76" y="445" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="b0T-cE-zRh"/>
@@ -101,18 +110,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
-                            <constraint firstItem="RCO-DF-oco" firstAttribute="top" secondItem="IO3-AQ-GS2" secondAttribute="bottom" constant="10" id="1P7-Oe-88Q"/>
                             <constraint firstItem="OWf-2C-ulo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ki-NC-kON"/>
                             <constraint firstItem="gqx-ls-7Qd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5PJ-jq-pYy"/>
                             <constraint firstItem="oV1-oH-6v3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5xc-Nw-XSy"/>
                             <constraint firstItem="abA-FO-7At" firstAttribute="centerX" secondItem="OWf-2C-ulo" secondAttribute="centerX" id="6rt-Ve-YvC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SXZ-qf-HNZ" secondAttribute="trailing" id="7IJ-1d-ep4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RCO-DF-oco" secondAttribute="trailing" constant="100" id="Lkl-hv-ICG"/>
+                            <constraint firstItem="RCO-DF-oco" firstAttribute="top" secondItem="V2N-zK-sUd" secondAttribute="bottom" constant="10" id="NTe-Ui-e98"/>
+                            <constraint firstItem="V2N-zK-sUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PvE-mG-YMU"/>
                             <constraint firstItem="RCO-DF-oco" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="WUP-hc-Tco"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqx-ls-7Qd" secondAttribute="trailing" id="WcW-jn-rX6"/>
                             <constraint firstItem="IO3-AQ-GS2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZTz-6x-Zpz"/>
                             <constraint firstItem="abA-FO-7At" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aRj-L7-JjV"/>
                             <constraint firstItem="sgY-Lt-Go7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="asy-yW-3wG"/>
+                            <constraint firstItem="V2N-zK-sUd" firstAttribute="top" secondItem="IO3-AQ-GS2" secondAttribute="bottom" id="bwP-cz-R5W"/>
+                            <constraint firstAttribute="trailing" secondItem="V2N-zK-sUd" secondAttribute="trailing" id="gDx-NQ-FO7"/>
                             <constraint firstItem="IO3-AQ-GS2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iUs-oB-Rgv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="abA-FO-7At" secondAttribute="trailing" id="ili-i7-jdL"/>
                             <constraint firstItem="SXZ-qf-HNZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jMj-Cr-Bhk"/>
@@ -134,6 +146,7 @@
                         <outlet property="button3" destination="gqx-ls-7Qd" id="7gC-qB-Be8"/>
                         <outlet property="button4" destination="oV1-oH-6v3" id="JiS-mT-LCO"/>
                         <outlet property="button5" destination="IO3-AQ-GS2" id="CEL-wY-Udn"/>
+                        <outlet property="button6" destination="V2N-zK-sUd" id="Ha0-tC-5fb"/>
                         <outlet property="label" destination="abA-FO-7At" id="lSR-cR-gq0"/>
                         <outlet property="scrollView" destination="VUV-NG-Lif" id="Y5p-Ou-gkB"/>
                         <outlet property="textField1" destination="RCO-DF-oco" id="IQE-Fg-ItN"/>
@@ -143,6 +156,7 @@
                         <segue destination="BgU-Pw-Va7" kind="modal" identifier="ToRxFunctorViewController" id="yQs-ZT-1EH"/>
                         <segue destination="t0i-pv-Sd6" kind="modal" identifier="ToRxTableViewController" id="91P-bf-tDS"/>
                         <segue destination="dDt-J9-UFQ" kind="modal" identifier="ToRxNetworkViewController" id="3k4-Pv-Prf"/>
+                        <segue destination="a8O-vc-iR8" kind="modal" identifier="ToRxCasesViewController" id="b2o-4h-hD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -328,6 +342,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ9-LE-KAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1604" y="298"/>
+        </scene>
+        <!--Rx Cases View Controller-->
+        <scene sceneID="H8a-Bj-Cgp">
+            <objects>
+                <viewController id="a8O-vc-iR8" customClass="RxCasesViewController" customModule="RxSwiftPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9HF-L2-t1v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HC0-zv-HJI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00Q-NM-f2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="298"/>
         </scene>
         <!--Rx Subject View Controller-->
         <scene sceneID="AF5-UZ-YRb">

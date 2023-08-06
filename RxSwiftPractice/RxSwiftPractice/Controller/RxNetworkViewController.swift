@@ -21,6 +21,8 @@ class RxNetworkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // MARK: - 单请求封装
+        
         getButton.rx.tap
             .subscribe { [weak self] (event: Event<()>) in
                 print("-------------- tap button get --------------")
@@ -32,6 +34,33 @@ class RxNetworkViewController: UIViewController {
                 print("-------------- tap button post --------------")
                 self?.sendPostRequest()
             }.disposed(by: bag)
+        
+        // MARK: - 多请求组合
+        
+        let getRequestSingle: Single<NetData> = networkService
+            .getRequest(path: "/posts/1")
+        let postRequestSingle: Single<NetData> = networkService
+            .postRequest(path: "/posts", parameters: [
+            "userId": 1,
+            "title": "New Post",
+            "body": "This is a new post created using RxSwift."
+        ])
+        
+        Single
+            .zip(getRequestSingle, postRequestSingle)
+            .subscribe(onSuccess: { (getResponse, postResponse) in
+                // get 部分
+                print("GET Request Success:")
+                print("UserID: \(getResponse.userId)")
+                print("Title: \(getResponse.title)")
+                print("Body: \(getResponse.body)")
+                // post 部分
+                print("POST Request Success:")
+                print("New Post ID: \(postResponse.id)")
+            }, onFailure: { error in
+                print("Error: \(error.localizedDescription)")
+            })
+            .disposed(by: bag)
     }
     
 }
