@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 class RxViewController: UIViewController {
 
@@ -32,12 +33,11 @@ class RxViewController: UIViewController {
         
         // MARK: - self.view
         
-        // 将背景 View 和点击事件绑定
-        let tapGesture = UITapGestureRecognizer()
-        self.view.addGestureRecognizer(tapGesture)
-        // 使用 rx.event 方法将 UITapGestureRecognizer 转换为可观察序列
-        tapGesture.rx.event
+        // 使用RxGesture进行手势处理
+        view.rx.tapGesture()
+            .when(.recognized)
             .subscribe(onNext: { [weak self] _ in
+                print("View tapped")
                 // 点击自己的空白 View 让 TextField 的键盘消失
                 self?.textField1.resignFirstResponder()
                 self?.textField2.resignFirstResponder()
